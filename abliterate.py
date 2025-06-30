@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
     if config["deccp"]:
         deccp_list = load_dataset("augmxnt/deccp", split="censored")
-        harmful_list += deccp_list["text"] # type: ignore
+        harmful_list += deccp_list["text"]  # type: ignore
 
     if isinstance(config["num-harmful"], int) and config["num-harmful"] > 0:
         harmful_list = random.sample(harmful_list, config["num-harmful"])
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     )
 
     if isinstance(config["input-refusal"], str):
-        print(f"Loading refusal tensor from {config["input-refusal"]}...")
+        print(f"Loading refusal tensor from {config['input-refusal']}...")
         refusal_dir = torch.load(config["input-refusal"])
     else:
         print("Computing refusal tensor...")
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         )
 
     if isinstance(config["output-refusal"], str):
-        print(f"Saving refusal tensor to {config["output-refusal"]}...")
+        print(f"Saving refusal tensor to {config['output-refusal']}...")
         torch.save(refusal_dir, config["output-refusal"])
 
     if not isinstance(config["output"], str):
@@ -126,6 +126,6 @@ if __name__ == "__main__":
         config["skip-end"],
         config["scale-factor"],
     )
-    print(f"Saving abliterated model to {config["output"]}...")
+    print(f"Saving abliterated model to {config['output']}...")
     model.save_pretrained(config["output"])
     tokenizer.save_pretrained(config["output"])

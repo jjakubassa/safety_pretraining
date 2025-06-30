@@ -1,3 +1,29 @@
+
+# Overview
+
+To run everything (using slurm cluster):
+
+```bash
+sbatch slurm.sh
+```
+
+This includes:
+- abliteration of models specified in slurm.sh with a "training set" of prompts
+    - model weights saved to `models` folder
+- generate responses for each model with and without abliteration
+- evaluation of responses. classfication of response into refusal/no refusal based on a) regex and b) a llm judge. a simple analysis of classification results is done (e.g. confusion matrix)
+    - logs with all responses and confusion matrix can be found at `logs` folder
+    - csv with responses and classification results can be found at `results` folder
+    - csv with summary statistics can be found at `results` folder
+
+Hints:
+- it might be nessecary to login to the hugginface account and accept conditions for the use of some llms (e.g. the default "mistralai/Ministral-8B-Instruct-2410")
+- requirements.txt might be not uptodate
+
+Seperation of data used for model abliteration and for evaluation is done with `split_data.py` script.
+
+Everything below is copied from the original repo and gives more details about the abliteration script.
+
 # Abliteration
 
 Make abliterated models using transformers, easy and fast.
