@@ -511,7 +511,6 @@ def evaluate(
     for metrics in all_metrics:
         model_name = metrics["model"]
         # Use just the last part of the model name for display
-        # Use just the last part of the model name for display
         display_name = metrics["model"].split("/")[-1]
         summary_table.add_row(
             display_name,
