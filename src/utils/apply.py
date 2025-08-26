@@ -17,6 +17,7 @@ def modify_tensor(
     tensor_float32 -= scale_factor * torch.matmul(
         torch.outer(refusal_dir_float32, refusal_dir_float32), tensor_float32
     )
+
     tensor_modified = tensor_float32.to(torch.bfloat16)
 
     torch.cuda.empty_cache()

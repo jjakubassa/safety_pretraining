@@ -10,11 +10,12 @@ from utils.data import load_data
 from utils.compute import compute_refusals
 from utils.apply import apply_abliteration
 from utils.arguments import parser, generate_config
-
+from utils.visualize import collect_hidden_states, get_pca_df, scatter_first_two_components
 
 if __name__ == "__main__":
     args = parser.parse_args()
     config = generate_config(args)
+
     assert (
         isinstance(config["model"], str)
         and isinstance(config["skip-begin"], int)
@@ -77,7 +78,9 @@ if __name__ == "__main__":
         low_cpu_mem_usage=True,
         device_map=config["device"],
         quantization_config=quant_config,
-        attn_implementation="flash_attention_2" if config["flash-attn"] else None,
+        attn_implementation="flash_attention_2"
+        if config["flash-attn"]
+        else None,
     )
     model.requires_grad_(False)
 
@@ -94,7 +97,11 @@ if __name__ == "__main__":
     else:
         print("Computing refusal tensor...")
         refusal_dir = compute_refusals(
-            model, tokenizer, harmful_list, harmless_list, config["layer-fraction"]
+            model,
+            tokenizer,
+            harmful_list,
+            harmless_list,
+            config["layer-fraction"],
         )
 
     if isinstance(config["output-refusal"], str):
@@ -117,6 +124,22 @@ if __name__ == "__main__":
             torch_dtype=torch.bfloat16,
             low_cpu_mem_usage=True,
             device_map="cpu",
+        )
+
+    if config.get("visualize", False):
+        layer_idx = int(config["layer-fraction"] * len(model.model.layers))
+        print(f"Visualizing at layer {layer_idx}...")
+
+        harmful_states = collect_hidden_states(
+            model, tokenizer, harmful_list, layer_idx
+        )
+        harmless_states = collect_hidden_states(
+            model, tokenizer, harmless_list, layer_idx
+        )
+        df = get_pca_df(harmful_states=harmful_states, harmless_states=harmless_states, n_components=10)
+
+        scatter_first_two_components(
+            df, save_path="pca_scatter_first_two_components.svg"
         )
 
     model = apply_abliteration(

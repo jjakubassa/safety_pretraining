@@ -28,7 +28,9 @@ parser.add_argument(
     default="bf16",
     help="Precision to use for ablation, default is bf16",
 )
-parser.add_argument("--output", "-o", type=str, default=None, help="Output directory")
+parser.add_argument(
+    "--output", "-o", type=str, default=None, help="Output directory"
+)
 parser.add_argument(
     "--skip-begin",
     type=int,
@@ -36,7 +38,10 @@ parser.add_argument(
     help="Number of layers to skip at the beginning. Defaults to 1 to avoid messing with the first layer",
 )
 parser.add_argument(
-    "--skip-end", type=int, default=0, help="Number of layers to skip at the end"
+    "--skip-end",
+    type=int,
+    default=0,
+    help="Number of layers to skip at the end",
 )
 parser.add_argument(
     "--layer-fraction",
@@ -51,13 +56,24 @@ parser.add_argument(
     help="Scale factor for ablation. Use a negative scale-factor to encourage refusal. If abliteration is not good, try to increase it a little bit",
 )
 parser.add_argument(
-    "--flash-attn", action="store_true", default=False, help="Use flash attention 2"
+    "--flash-attn",
+    action="store_true",
+    default=False,
+    help="Use flash attention 2",
 )
 parser.add_argument(
-    "--data-harmful", "-dhf", type=str, default=None, help="Harmful prompts file"
+    "--data-harmful",
+    "-dhf",
+    type=str,
+    default=None,
+    help="Harmful prompts file",
 )
 parser.add_argument(
-    "--data-harmless", "-dhl", type=str, default=None, help="Harmless prompts file"
+    "--data-harmless",
+    "-dhl",
+    type=str,
+    default=None,
+    help="Harmless prompts file",
 )
 parser.add_argument(
     "--deccp",
@@ -66,7 +82,11 @@ parser.add_argument(
     help="For Chinese models, in specific topics",
 )
 parser.add_argument(
-    "--num-harmful", "-nhf", type=int, default=-1, help="Number of harmful calibrations"
+    "--num-harmful",
+    "-nhf",
+    type=int,
+    default=-1,
+    help="Number of harmful calibrations",
 )
 parser.add_argument(
     "--num-harmless",
@@ -75,13 +95,26 @@ parser.add_argument(
     default=-1,
     help="Number of harmless calibrations",
 )
+parser.add_argument(
+    "--visualize",
+    action="store_true",
+    help="Plot PCA projection of hidden states",
+)
 
 refusals = parser.add_mutually_exclusive_group()
 refusals.add_argument(
-    "--input-refusal", "-ir", type=str, default=None, help="Input tensor for refusal"
+    "--input-refusal",
+    "-ir",
+    type=str,
+    default=None,
+    help="Input tensor for refusal",
 )
 refusals.add_argument(
-    "--output-refusal", "-or", type=str, default=None, help="Output tensor for refusal"
+    "--output-refusal",
+    "-or",
+    type=str,
+    default=None,
+    help="Output tensor for refusal",
 )
 
 quant = parser.add_mutually_exclusive_group()
@@ -103,8 +136,13 @@ def check_config(config: dict[str, str | int | float | None]) -> None:
     if config["model"] is None:
         raise ValueError("Model name must be specified.")
     if config["output"] is None and config["output-refusal"] is None:
-        raise ValueError("Output model or refusal direction must be specified.")
-    if config["input-refusal"] is not None and config["output-refusal"] is not None:
+        raise ValueError(
+            "Output model or refusal direction must be specified."
+        )
+    if (
+        config["input-refusal"] is not None
+        and config["output-refusal"] is not None
+    ):
         raise ValueError("Do NOT use input and output refusal simultaneously.")
     if config["load-in-4bit"] and config["load-in-8bit"]:
         raise ValueError("Do NOT use 4-bit and 8-bit simultaneously.")
@@ -137,6 +175,7 @@ def generate_config(args: Namespace) -> dict[str, str | int | float | None]:
     config.setdefault("output-refusal", args.output_refusal)
     config.setdefault("load-in-4bit", args.load_in_4bit)
     config.setdefault("load-in-8bit", args.load_in_8bit)
+    config.setdefault("visualize", args.visualize)
 
     check_config(config)
 
