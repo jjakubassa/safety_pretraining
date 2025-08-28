@@ -40,7 +40,7 @@ def judge_refusal_with_openai(df: pd.DataFrame, logger, batch_size: int = 2) -> 
 def run(comparison_csv: str) -> None:
     console = Console()
     try:
-        df = pd.read_csv(comparison_csv).head()
+        df = pd.read_csv(comparison_csv)
     except Exception as e:
         console.print(f"[red]Error loading CSV '{comparison_csv}': {e}[/red]")
         raise
