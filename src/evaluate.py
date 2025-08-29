@@ -268,7 +268,7 @@ def run_prompts(
     model, tokenizer = load_hg_model_and_tokenizer(model_name, device)
     logger.info("Model loaded successfully")
 
-    batch_size = 32
+    batch_size = 2
     answers = []
     max_new_tokens = 2000
     num_prompts = len(df)

@@ -10,67 +10,58 @@
 # setup
 # referecence model
 model1="HuggingFaceTB/SmolLM2-1.7B-Instruct"
-model1abl="models/HuggingFaceTB/SmolLM2-1.7B-Instruct-abliterated"
+model1abl="models/$model1-abliterated"
 
-# only rephrasing no refusal
-model2="locuslab/mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning-600B"
-model2abl="models/locuslab/mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning-600B-abliterated"
+# Trained on raw data (same as model 3 above)
+# mix_ift_v4-smollm2-1.7b-all_raw_folders_baseline-600B
+model2="locuslab/mix_ift_v4-smollm2-1.7b-all_raw_folders_baseline-600B"
+model2abl="models/$model2-abliterated"
 
-# one of the best models
-model3="locuslab/mix_ift_v9-smollm2-1.7b-score0_rephrase123_mild_ref45_metadata_5p-600B-metamix3p-1k-0"
-model3abl="models/locuslab/mix_ift_v9-smollm2-1.7b-score0_rephrase123_mild_ref45_metadata_5p-600B-metamix3p-1k-0-abliterated"
+# Score 0 data (safe data) only:
+# locuslab/mix_ift_v4-smollm2-1.7b-score0_only-600B
+model3="locuslab/mix_ift_v4-smollm2-1.7b-score0_only-600B"
+model3abl="models/$model3-abliterated"
 
-# model4="zai-org/glm-4-9b-chat-hf"
-# model4abl="zai-org/glm-4-9b-chat-hf-abliterated"
+# Score 0 + Rephrase data
+# mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning-600B
+model4="locuslab/mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning-600B"
+model4abl="models/$model4-abliterated"
 
-# second reference
-model5="Qwen/Qwen3-14B"
-model5abl="models/Qwen/Qwen3-14B-abliterated"
+# Score 0 + Rephrase data + Metatags
+# mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning_metadata-600B
+model5="locuslab/mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning_metadata-600B"
+model5abl="models/$model5-abliterated"
 
-abl_args="--data-harmful data/harmful_train.parquet --data-harmless data/harmless_train.parquet --refusal_dir_fun=MEAN"
+# Score 0 + Rephrase data + Refusals
+# mix_ift_v4-smollm2-1.7b-base-score0_mix_rephrase123_with_mild_refusal45-600B
+model6="locuslab/mix_ift_v4-smollm2-1.7b-base-score0_mix_rephrase123_with_mild_refusal45-600B"
+model6abl="models/$model6-abliterated"
+
+# Score 0 + Rephrase data + Refusals + Metatags
+# mix_ift_v9-smollm2-1.7b-score0_rephrase123_mild_ref45_metadata_5p-600B-metamix3p-1k-0
+model7="locuslab/mix_ift_v9-smollm2-1.7b-score0_rephrase123_mild_ref45_metadata_5p-600B-metamix3p-1k-0"
+model7abl="models/$model7-abliterated"
+
+model8="zai-org/glm-4-9b-chat-hf"
+model8abl="models/$model8-abliterated"
+
+model9="meta-llama/Llama-3.3-70B-Instruct"
+model9abl="models/$model9-abliterated"
+
+model10="Qwen/Qwen3-14B"
+model10abl="models/$model10-abliterated"
 
 echo $(date)
 
-# abliterate
-# cmd="uv run src/abliterate.py --model-name $model1 --output $model1abl $abl_args"
-# echo $cmd
-# $cmd
-
-# cmd="uv run src/abliterate.py --model-name $model2 --output $model2abl $abl_args"
-# echo $cmd
-# $cmd
-
-# cmd="uv run src/abliterate.py --model-name $model3 --output $model3abl $abl_args"
-# echo $cmd
-# $cmd
-
-# # cmd="uv run src/abliterate.py --model-name $model4 --output $model4abl $abl_args"
-# # echo $cmd
-# # $cmd
-
-# cmd="uv run src/abliterate.py --model-name $model5 --output $model5abl $abl_args"
-# echo $cmd
-# $cmd
-
-# cmd="uv run src/old/abliterate.py -m $model1 -o $model1abl"
-# echo $cmd
-# $cmd
-
-# cmd="uv run src/old/abliterate.py -m $model2 -o $model2abl"
-# echo $cmd
-# $cmd
-# cmd="uv run src/old/abliterate.py -m $model3 -o $model3abl"
-# echo $cmd
-# $cmd
-
-# # cmd="uv run src/old/abliterate.py -m $model4 -o $model4abl"
-# # echo $cmd
-# # $cmd
-
-# cmd="uv run src/old/abliterate.py -m $model5 -o $model5abl"
-# echo $cmd
-# $cmd
+# for idx in 10 9 8 7 6 5 4 3 2 1; do
+#     eval "model=\$model${idx}"
+#     eval "modelabl=\$model${idx}abl"
+#     cmd="uv run src/abliterate.py -m $model -o $modelabl"
+#     echo $cmd
+#     $cmd
+# done
 
 # evaluate
-cmd="uv run src/evaluate.py --model_names $model1 $model1abl $model2 $model2abl $model3 $model3abl $model5 $model5abl" # $model4 $model4abl
+cmd="uv run src/evaluate.py --model_names $model1 $model1abl $model2 $model2abl $model3 $model3abl $model4 $model4abl $model5 $model5abl $model6 $model6abl $model7 $model7abl $model8 $model8abl $model9 $model9abl $model10 $model10abl"
+echo $cmd
 $cmd
