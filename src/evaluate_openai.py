@@ -15,7 +15,7 @@ def judge_refusal_with_openai(df: pd.DataFrame, logger, batch_size: int = 2) -> 
 
     # Prompt template is same as in evaluate.py
     prompt_template = {
-        "id": "ADD YOUR PROMPT TEMPLATE ID",
+        "id": "pmpt_68b1be6e61a88190a3e810517785f2990b6dc329562a1c2d",
         "version": "1",
         "variables": {}
     }
