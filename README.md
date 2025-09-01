@@ -128,6 +128,56 @@ Now your model will be abliterated and saved to `<output_dir>`. Once it finishes
 
 ## Advanced Usage
 
+### Evaluating with `evaluate_hf_all_judges.py`
+
+This script evaluates model responses for refusal vs. non-refusal using one or more Hugging Face models as "judges". It takes a CSV file containing `question` and `response` columns, runs a judging prompt for each row, and appends the results.
+
+The script generates two output files:
+-   `<input_csv_path>_with_<sanitized_judge_model_name>.csv`: The original data with an added boolean column `is_refusal_<sanitized_judge_model_name>`.
+-   `<input_csv_path>_<sanitized_judge_model_name>_summary.csv`: A summary of the evaluation results.
+
+#### Prerequisites
+
+Ensure you have the necessary dependencies installed. If you are using `uv`, it will handle the environment for you.
+
+```shell
+pip install pandas rich tyro transformers huggingface_hub accelerate torch --upgrade
+```
+
+You may also need to set environment variables like `HUGGING_FACE_HUB_TOKEN` for private models or `CUDA_VISIBLE_DEVICES` for local execution.
+
+#### Usage
+
+Here are some examples of how to run the script:
+
+**1. Local Evaluation:**
+
+To run the evaluation using models downloaded locally on your machine:
+
+```bash
+uv run src/evaluate_hf_all_judges.py --comparison_csv path/to/data.csv --model all --batch_size 2
+```
+
+-   `--comparison_csv`: Path to the input CSV file.
+-   `--model all`: Use all predefined judge models. You can also specify a single model ID.
+-   `--batch_size`: Adjust based on your VRAM.
+
+**2. Serverless HF Inference API:**
+
+To use Hugging Face's serverless inference API (if the judge model is available and your token has access):
+
+```bash
+uv run src/evaluate_hf_all_judges.py --comparison_csv path/to/data.csv --model all --use_serverless True
+```
+
+**3. Custom Inference Endpoint:**
+
+To use a custom endpoint (e.g., a TGI or vLLM instance) that is compatible with `huggingface_hub.InferenceClient`:
+
+```bash
+uv run src/evaluate_hf_all_judges.py --comparison_csv path/to/data.csv --endpoint_url https://your-endpoint/v1/models/whatever --model any-string
+```
+
 ### Use config files
 
 This repository now supports `.json` config file. This file should contain a `dict` of config key value pairs. For example:
@@ -222,6 +272,96 @@ Use `--help` to see all available arguments:
 ```shell
 python abliterate.py --help
 ```
+
+## Data & Key Artifacts
+
+This section explains what’s inside `important_csv_files/` and `data/`, how to read the files, and which ones to use for figures/tables.
+
+---
+
+### 📂 `important_csv_files/` — summaries & judge outputs
+
+Use the screenshot above as a visual index of filenames. File names include timestamps; prefer the latest version when multiple exist.
+
+- **`user_study_*.csv`** 
+ Outputs from the **two human annotators** acting as refusal judges on the **10-question subset** (5 harmful + 5 harmless). 
+ Each row corresponds to a *(model, question)* pair with the annotator’s binary decision (refusal vs. non-refusal) and derived counts.
+
+- **`model_comparison_10q_with_llm_and_humans_summary*.csv`** 
+ **Summary over the 10-question subset** that **combines human annotations and LLM judges**. 
+ Includes results for **all 10 model pairs** (original vs. abliterated), i.e., **20 models** total. 
+ Use this for human–LLM judge agreement plots and per-judge confusion metrics on the small, human-grounded set.
+
+- **`model_comparison_*_with_openai_with_all.csv`** 
+ **Full 100-question evaluation** (50 harmful + 50 harmless) for the same **10 model pairs** across **all LLM refusal judges** used in the study (including **ChatGPT/OpenAI**). 
+ This is the *row-level* table with prompts, model responses, and one boolean column per judge:
+ ```
+ is_refusal_<judge_name>
+ ```
+ Example judges: `ChatGPT5`, `GLM-4`, `Qwen3`, `SmolLM2`, `GPT-oss`, `regex`, plus any others used.
+
+- **`model_comparison_*_with_openai_all_summary.csv`** 
+ A compact per-judge summary derived from the corresponding `*_with_openai_with_all.csv`. 
+ **Schema (one row per *(model, label, refusal_judge)*)**:
+ ```
+ model, label, refusal_judge, refused, not_refused, total
+ ```
+ - `label` is the request label (`harmful` / `harmless`).
+ - `refused` / `not_refused` count how many rows that judge classified as refusal / non-refusal.
+ - `total` equals `refused + not_refused` for that group.
+
+- **`model_comparison_all_summary_renamed.csv`** 
+ Same content as the per-judge summaries, but with **presentation-ready judge names** (e.g., “ChatGPT5”, “GLM-4”, “regex”, etc.) for plotting.
+
+> **Tip:** 
+> The `*_summary.csv` files are the fastest start for aggregate plots (rates, correlations, confusion matrices). 
+> Use `*_with_openai_with_all.csv` when you need to recompute metrics or apply custom filters at the row level.
+
+**Quick preview example (pandas):**
+```python
+import pandas as pd
+
+full = pd.read_csv("important_csv_files/model_comparison_20250828_150255_with_openai_with_all.csv")
+print(full.filter(like="is_refusal_").columns[:5]) # judge columns
+
+summary = pd.read_csv("important_csv_files/model_comparison_20250828_150255_with_openai_all_summary.csv")
+print(summary.head())
+```
+
+---
+
+### 📂 `data/` — prompt sets
+
+- **`harmful.parquet`** — pool of harmful prompts used for abliteration and/or evaluation. 
+- **`harmless.parquet`** — pool of harmless prompts used for abliteration and/or evaluation.
+
+Both Parquet files contain a `text` column with one prompt per row.
+
+**View with pandas (requires `pyarrow` or `fastparquet`):**
+```python
+import pandas as pd
+# pip install pyarrow # if needed
+
+harmful = pd.read_parquet("data/harmful.parquet")
+harmless = pd.read_parquet("data/harmless.parquet")
+
+print(harmful.shape, harmless.shape)
+print(harmful.head(3))
+print(harmless.head(3))
+```
+
+**View with DuckDB (quick SQL over Parquet):**
+```sql
+-- duckdb
+INSTALL parquet; LOAD parquet;
+
+SELECT COUNT(*) FROM 'data/harmful.parquet';
+SELECT * FROM 'data/harmless.parquet' LIMIT 5;
+```
+
+> **Note on data splits:** 
+> The separation between prompts used for **model abliteration (training)** and for **evaluation** is handled by `split_data.py` to avoid leakage between sets.
+
 
 ## Credits
 
