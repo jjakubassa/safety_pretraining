@@ -366,3 +366,4 @@ SELECT * FROM 'data/harmless.parquet' LIMIT 5;
 - [Sumandora/remove-refusals-with-transformers](https://github.com/Sumandora/remove-refusals-with-transformers)
 - [AUGMXNT/deccp](https://github.com/AUGMXNT/deccp)
 - [huihui-ai](https://huggingface.co/huihui-ai)
+- [ChatGPT5](https://chatgpt.com/)
