@@ -281,8 +281,6 @@ This section explains what’s inside `important_csv_files/` and `data/`, how to
 
 ### 📂 `important_csv_files/` — summaries & judge outputs
 
-Use the screenshot above as a visual index of filenames. File names include timestamps; prefer the latest version when multiple exist.
-
 - **`user_study_*.csv`** 
  Outputs from the **two human annotators** acting as refusal judges on the **10-question subset** (5 harmful + 5 harmless). 
  Each row corresponds to a *(model, question)* pair with the annotator’s binary decision (refusal vs. non-refusal) and derived counts.
