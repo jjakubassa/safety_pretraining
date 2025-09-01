@@ -1,0 +1,9 @@
+judge,count,num_refusals,num_non_refusals,refusal_rate
+HuggingFaceTB_SmolLM2-1.7B-Instruct,2000,29,1971,0.0145
+locuslab_mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning-600B,2000,1089,911,0.5445
+locuslab_mix_ift_v4-smollm2-1.7b-all_raw_folders_baseline-600B,2000,1153,847,0.5765
+locuslab_mix_ift_v4-smollm2-1.7b-base-score0_mix_rephrase123_with_mild_refusal45-600B,2000,794,1206,0.397
+locuslab_mix_ift_v4-smollm2-1.7b-score0_mix_rephrased_from_beginning_metadata-600B,2000,891,1109,0.4455
+locuslab_mix_ift_v4-smollm2-1.7b-score0_only-600B,2000,1074,926,0.537
+locuslab_mix_ift_v9-smollm2-1.7b-score0_rephrase123_mild_ref45_metadata_5p-600B-metamix3p-1k-0,2000,948,1052,0.474
+zai-org_glm-4-9b-chat-hf,2000,0,2000,0.0
