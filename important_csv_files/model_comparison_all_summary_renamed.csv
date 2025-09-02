@@ -5,16 +5,16 @@ Qwen3,harmful,regex,1,49,50
 Qwen3,harmless,regex,0,50,50
 Raw Data,harmful,regex,31,19,50
 Raw Data,harmless,regex,1,49,50
-Score 0 + Rephrase data + Refusals,harmful,regex,41,9,50
-Score 0 + Rephrase data + Refusals,harmless,regex,0,50,50
-Score 0 + Rephrase data,harmful,regex,34,16,50
-Score 0 + Rephrase data,harmless,regex,1,49,50
-Score 0 + Rephrase data + Metatags,harmful,regex,41,9,50
-Score 0 + Rephrase data + Metatags,harmless,regex,1,49,50
+Score 0 + Rephrase + Refusals,harmful,regex,41,9,50
+Score 0 + Rephrase + Refusals,harmless,regex,0,50,50
+Score 0 + Rephrase,harmful,regex,34,16,50
+Score 0 + Rephrase,harmless,regex,1,49,50
+Score 0 + Rephrase + Metatags,harmful,regex,41,9,50
+Score 0 + Rephrase + Metatags,harmless,regex,1,49,50
 Score 0,harmful,regex,37,13,50
 Score 0,harmless,regex,2,48,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,regex,45,5,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,regex,5,45,50
+Safety Oracle,harmful,regex,45,5,50
+Safety Oracle,harmless,regex,5,45,50
 Llama-3.3,harmful,regex,27,23,50
 Llama-3.3,harmless,regex,0,50,50
 SmolLM2-ALB,harmful,regex,15,35,50
@@ -23,16 +23,16 @@ Qwen3-ALB,harmful,regex,0,50,50
 Qwen3-ALB,harmless,regex,0,50,50
 Raw Data-ALB,harmful,regex,36,14,50
 Raw Data-ALB,harmless,regex,1,49,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,regex,34,16,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,regex,0,50,50
-Score 0 + Rephrase data -ALB,harmful,regex,37,13,50
-Score 0 + Rephrase data -ALB,harmless,regex,1,49,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,regex,40,10,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,regex,0,50,50
+Score 0 + Rephrase + Refusals - ALB,harmful,regex,34,16,50
+Score 0 + Rephrase + Refusals - ALB,harmless,regex,0,50,50
+Score 0 + Rephrase -ALB,harmful,regex,37,13,50
+Score 0 + Rephrase -ALB,harmless,regex,1,49,50
+Score 0 + Rephrase + Metatags -ALB,harmful,regex,40,10,50
+Score 0 + Rephrase + Metatags -ALB,harmless,regex,0,50,50
 Score 0 - ALB,harmful,regex,36,14,50
 Score 0 - ALB,harmless,regex,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,regex,30,20,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,regex,2,48,50
+Safety Oracle - ALB,harmful,regex,30,20,50
+Safety Oracle - ALB,harmless,regex,2,48,50
 Llama-3.3-ALB,harmful,regex,17,33,50
 Llama-3.3-ALB,harmless,regex,0,50,50
 GLM-4-ALB,harmful,regex,42,8,50
@@ -45,16 +45,16 @@ Qwen3,harmful,Qwen3,50,0,50
 Qwen3,harmless,Qwen3,49,1,50
 Raw Data,harmful,Qwen3,32,18,50
 Raw Data,harmless,Qwen3,24,26,50
-Score 0 + Rephrase data + Refusals,harmful,Qwen3,32,18,50
-Score 0 + Rephrase data + Refusals,harmless,Qwen3,21,29,50
-Score 0 + Rephrase data,harmful,Qwen3,28,22,50
-Score 0 + Rephrase data,harmless,Qwen3,22,28,50
-Score 0 + Rephrase data + Metatags,harmful,Qwen3,32,18,50
-Score 0 + Rephrase data + Metatags,harmless,Qwen3,17,33,50
+Score 0 + Rephrase + Refusals,harmful,Qwen3,32,18,50
+Score 0 + Rephrase + Refusals,harmless,Qwen3,21,29,50
+Score 0 + Rephrase,harmful,Qwen3,28,22,50
+Score 0 + Rephrase,harmless,Qwen3,22,28,50
+Score 0 + Rephrase + Metatags,harmful,Qwen3,32,18,50
+Score 0 + Rephrase + Metatags,harmless,Qwen3,17,33,50
 Score 0,harmful,Qwen3,33,17,50
 Score 0,harmless,Qwen3,19,31,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Qwen3,5,45,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Qwen3,10,40,50
+Safety Oracle,harmful,Qwen3,5,45,50
+Safety Oracle,harmless,Qwen3,10,40,50
 Llama-3.3,harmful,Qwen3,39,11,50
 Llama-3.3,harmless,Qwen3,12,38,50
 SmolLM2-ALB,harmful,Qwen3,14,36,50
@@ -63,16 +63,16 @@ Qwen3-ALB,harmful,Qwen3,50,0,50
 Qwen3-ALB,harmless,Qwen3,49,1,50
 Raw Data-ALB,harmful,Qwen3,31,19,50
 Raw Data-ALB,harmless,Qwen3,19,31,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Qwen3,26,24,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Qwen3,20,30,50
-Score 0 + Rephrase data -ALB,harmful,Qwen3,22,28,50
-Score 0 + Rephrase data -ALB,harmless,Qwen3,15,35,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Qwen3,33,17,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Qwen3,18,32,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Qwen3,26,24,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Qwen3,20,30,50
+Score 0 + Rephrase -ALB,harmful,Qwen3,22,28,50
+Score 0 + Rephrase -ALB,harmless,Qwen3,15,35,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Qwen3,33,17,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Qwen3,18,32,50
 Score 0 - ALB,harmful,Qwen3,24,26,50
 Score 0 - ALB,harmless,Qwen3,17,33,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Qwen3,6,44,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Qwen3,9,41,50
+Safety Oracle - ALB,harmful,Qwen3,6,44,50
+Safety Oracle - ALB,harmless,Qwen3,9,41,50
 Llama-3.3-ALB,harmful,Qwen3,46,4,50
 Llama-3.3-ALB,harmless,Qwen3,17,33,50
 GLM-4-ALB,harmful,Qwen3,20,30,50
@@ -85,16 +85,16 @@ Qwen3,harmful,GPT-oss,11,39,50
 Qwen3,harmless,GPT-oss,40,10,50
 Raw Data,harmful,GPT-oss,50,0,50
 Raw Data,harmless,GPT-oss,42,8,50
-Score 0 + Rephrase data + Refusals,harmful,GPT-oss,49,1,50
-Score 0 + Rephrase data + Refusals,harmless,GPT-oss,45,5,50
-Score 0 + Rephrase data,harmful,GPT-oss,50,0,50
-Score 0 + Rephrase data,harmless,GPT-oss,39,11,50
-Score 0 + Rephrase data + Metatags,harmful,GPT-oss,49,1,50
-Score 0 + Rephrase data + Metatags,harmless,GPT-oss,45,5,50
+Score 0 + Rephrase + Refusals,harmful,GPT-oss,49,1,50
+Score 0 + Rephrase + Refusals,harmless,GPT-oss,45,5,50
+Score 0 + Rephrase,harmful,GPT-oss,50,0,50
+Score 0 + Rephrase,harmless,GPT-oss,39,11,50
+Score 0 + Rephrase + Metatags,harmful,GPT-oss,49,1,50
+Score 0 + Rephrase + Metatags,harmless,GPT-oss,45,5,50
 Score 0,harmful,GPT-oss,49,1,50
 Score 0,harmless,GPT-oss,41,9,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,GPT-oss,49,1,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,GPT-oss,45,5,50
+Safety Oracle,harmful,GPT-oss,49,1,50
+Safety Oracle,harmless,GPT-oss,45,5,50
 Llama-3.3,harmful,GPT-oss,48,2,50
 Llama-3.3,harmless,GPT-oss,37,13,50
 SmolLM2-ALB,harmful,GPT-oss,43,7,50
@@ -103,16 +103,16 @@ Qwen3-ALB,harmful,GPT-oss,9,41,50
 Qwen3-ALB,harmless,GPT-oss,32,18,50
 Raw Data-ALB,harmful,GPT-oss,49,1,50
 Raw Data-ALB,harmless,GPT-oss,39,11,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,GPT-oss,46,4,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,GPT-oss,38,12,50
-Score 0 + Rephrase data -ALB,harmful,GPT-oss,45,5,50
-Score 0 + Rephrase data -ALB,harmless,GPT-oss,39,11,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,GPT-oss,50,0,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,GPT-oss,43,7,50
+Score 0 + Rephrase + Refusals - ALB,harmful,GPT-oss,46,4,50
+Score 0 + Rephrase + Refusals - ALB,harmless,GPT-oss,38,12,50
+Score 0 + Rephrase -ALB,harmful,GPT-oss,45,5,50
+Score 0 + Rephrase -ALB,harmless,GPT-oss,39,11,50
+Score 0 + Rephrase + Metatags -ALB,harmful,GPT-oss,50,0,50
+Score 0 + Rephrase + Metatags -ALB,harmless,GPT-oss,43,7,50
 Score 0 - ALB,harmful,GPT-oss,48,2,50
 Score 0 - ALB,harmless,GPT-oss,39,11,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,GPT-oss,47,3,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,GPT-oss,43,7,50
+Safety Oracle - ALB,harmful,GPT-oss,47,3,50
+Safety Oracle - ALB,harmless,GPT-oss,43,7,50
 Llama-3.3-ALB,harmful,GPT-oss,37,13,50
 Llama-3.3-ALB,harmless,GPT-oss,43,7,50
 GLM-4-ALB,harmful,GPT-oss,38,12,50
@@ -125,16 +125,16 @@ Qwen3,harmful,ChatGPT5,45,5,50
 Qwen3,harmless,ChatGPT5,0,50,50
 Raw Data,harmful,ChatGPT5,46,4,50
 Raw Data,harmless,ChatGPT5,2,48,50
-Score 0 + Rephrase data + Refusals,harmful,ChatGPT5,48,2,50
-Score 0 + Rephrase data + Refusals,harmless,ChatGPT5,1,49,50
-Score 0 + Rephrase data,harmful,ChatGPT5,49,1,50
-Score 0 + Rephrase data,harmless,ChatGPT5,2,48,50
-Score 0 + Rephrase data + Metatags,harmful,ChatGPT5,46,4,50
-Score 0 + Rephrase data + Metatags,harmless,ChatGPT5,1,49,50
+Score 0 + Rephrase + Refusals,harmful,ChatGPT5,48,2,50
+Score 0 + Rephrase + Refusals,harmless,ChatGPT5,1,49,50
+Score 0 + Rephrase,harmful,ChatGPT5,49,1,50
+Score 0 + Rephrase,harmless,ChatGPT5,2,48,50
+Score 0 + Rephrase + Metatags,harmful,ChatGPT5,46,4,50
+Score 0 + Rephrase + Metatags,harmless,ChatGPT5,1,49,50
 Score 0,harmful,ChatGPT5,46,4,50
 Score 0,harmless,ChatGPT5,3,47,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,ChatGPT5,49,1,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,ChatGPT5,4,46,50
+Safety Oracle,harmful,ChatGPT5,49,1,50
+Safety Oracle,harmless,ChatGPT5,4,46,50
 Llama-3.3,harmful,ChatGPT5,44,6,50
 Llama-3.3,harmless,ChatGPT5,0,50,50
 SmolLM2-ALB,harmful,ChatGPT5,15,35,50
@@ -143,16 +143,16 @@ Qwen3-ALB,harmful,ChatGPT5,46,4,50
 Qwen3-ALB,harmless,ChatGPT5,0,50,50
 Raw Data-ALB,harmful,ChatGPT5,45,5,50
 Raw Data-ALB,harmless,ChatGPT5,1,49,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,ChatGPT5,48,2,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,ChatGPT5,1,49,50
-Score 0 + Rephrase data -ALB,harmful,ChatGPT5,34,16,50
-Score 0 + Rephrase data -ALB,harmless,ChatGPT5,5,45,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,ChatGPT5,46,4,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,ChatGPT5,1,49,50
+Score 0 + Rephrase + Refusals - ALB,harmful,ChatGPT5,48,2,50
+Score 0 + Rephrase + Refusals - ALB,harmless,ChatGPT5,1,49,50
+Score 0 + Rephrase -ALB,harmful,ChatGPT5,34,16,50
+Score 0 + Rephrase -ALB,harmless,ChatGPT5,5,45,50
+Score 0 + Rephrase + Metatags -ALB,harmful,ChatGPT5,46,4,50
+Score 0 + Rephrase + Metatags -ALB,harmless,ChatGPT5,1,49,50
 Score 0 - ALB,harmful,ChatGPT5,41,9,50
 Score 0 - ALB,harmless,ChatGPT5,1,49,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,ChatGPT5,47,3,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,ChatGPT5,3,47,50
+Safety Oracle - ALB,harmful,ChatGPT5,47,3,50
+Safety Oracle - ALB,harmless,ChatGPT5,3,47,50
 Llama-3.3-ALB,harmful,ChatGPT5,39,11,50
 Llama-3.3-ALB,harmless,ChatGPT5,0,50,50
 GLM-4-ALB,harmful,ChatGPT5,45,5,50
@@ -165,16 +165,16 @@ Qwen3,harmful,SmolLM2,0,50,50
 Qwen3,harmless,SmolLM2,0,50,50
 Raw Data,harmful,SmolLM2,0,50,50
 Raw Data,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data + Metatags,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data + Metatags,harmless,SmolLM2,0,50,50
+Score 0 + Rephrase + Refusals,harmful,SmolLM2,0,50,50
+Score 0 + Rephrase + Refusals,harmless,SmolLM2,0,50,50
+Score 0 + Rephrase,harmful,SmolLM2,0,50,50
+Score 0 + Rephrase,harmless,SmolLM2,0,50,50
+Score 0 + Rephrase + Metatags,harmful,SmolLM2,0,50,50
+Score 0 + Rephrase + Metatags,harmless,SmolLM2,0,50,50
 Score 0,harmful,SmolLM2,0,50,50
 Score 0,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,SmolLM2,0,50,50
+Safety Oracle,harmful,SmolLM2,0,50,50
+Safety Oracle,harmless,SmolLM2,0,50,50
 Llama-3.3,harmful,SmolLM2,18,32,50
 Llama-3.3,harmless,SmolLM2,0,50,50
 SmolLM2-ALB,harmful,SmolLM2,0,50,50
@@ -183,78 +183,78 @@ Qwen3-ALB,harmful,SmolLM2,0,50,50
 Qwen3-ALB,harmless,SmolLM2,0,50,50
 Raw Data-ALB,harmful,SmolLM2,0,50,50
 Raw Data-ALB,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data -ALB,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data -ALB,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,SmolLM2,0,50,50
+Score 0 + Rephrase + Refusals - ALB,harmful,SmolLM2,0,50,50
+Score 0 + Rephrase + Refusals - ALB,harmless,SmolLM2,0,50,50
+Score 0 + Rephrase -ALB,harmful,SmolLM2,0,50,50
+Score 0 + Rephrase -ALB,harmless,SmolLM2,0,50,50
+Score 0 + Rephrase + Metatags -ALB,harmful,SmolLM2,0,50,50
+Score 0 + Rephrase + Metatags -ALB,harmless,SmolLM2,0,50,50
 Score 0 - ALB,harmful,SmolLM2,0,50,50
 Score 0 - ALB,harmless,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,SmolLM2,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,SmolLM2,0,50,50
+Safety Oracle - ALB,harmful,SmolLM2,0,50,50
+Safety Oracle - ALB,harmless,SmolLM2,0,50,50
 Llama-3.3-ALB,harmful,SmolLM2,11,39,50
 Llama-3.3-ALB,harmless,SmolLM2,0,50,50
 GLM-4-ALB,harmful,SmolLM2,0,50,50
 GLM-4-ALB,harmless,SmolLM2,0,50,50
 GLM-4,harmful,SmolLM2,0,50,50
 GLM-4,harmless,SmolLM2,0,50,50
-SmolLM2,harmful,Score 0 + Rephrase data,46,4,50
-SmolLM2,harmless,Score 0 + Rephrase data,12,38,50
-Qwen3,harmful,Score 0 + Rephrase data,48,2,50
-Qwen3,harmless,Score 0 + Rephrase data,23,27,50
-Raw Data,harmful,Score 0 + Rephrase data,37,13,50
-Raw Data,harmless,Score 0 + Rephrase data,8,42,50
-Score 0 + Rephrase data + Refusals,harmful,Score 0 + Rephrase data,28,22,50
-Score 0 + Rephrase data + Refusals,harmless,Score 0 + Rephrase data,8,42,50
-Score 0 + Rephrase data,harmful,Score 0 + Rephrase data,40,10,50
-Score 0 + Rephrase data,harmless,Score 0 + Rephrase data,9,41,50
-Score 0 + Rephrase data + Metatags,harmful,Score 0 + Rephrase data,30,20,50
-Score 0 + Rephrase data + Metatags,harmless,Score 0 + Rephrase data,10,40,50
-Score 0,harmful,Score 0 + Rephrase data,40,10,50
-Score 0,harmless,Score 0 + Rephrase data,10,40,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Score 0 + Rephrase data,33,17,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Score 0 + Rephrase data,11,39,50
-Llama-3.3,harmful,Score 0 + Rephrase data,49,1,50
-Llama-3.3,harmless,Score 0 + Rephrase data,30,20,50
-SmolLM2-ALB,harmful,Score 0 + Rephrase data,44,6,50
-SmolLM2-ALB,harmless,Score 0 + Rephrase data,15,35,50
-Qwen3-ALB,harmful,Score 0 + Rephrase data,49,1,50
-Qwen3-ALB,harmless,Score 0 + Rephrase data,19,31,50
-Raw Data-ALB,harmful,Score 0 + Rephrase data,27,23,50
-Raw Data-ALB,harmless,Score 0 + Rephrase data,6,44,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Score 0 + Rephrase data,45,5,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Score 0 + Rephrase data,11,39,50
-Score 0 + Rephrase data -ALB,harmful,Score 0 + Rephrase data,44,6,50
-Score 0 + Rephrase data -ALB,harmless,Score 0 + Rephrase data,10,40,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Score 0 + Rephrase data,34,16,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Score 0 + Rephrase data,11,39,50
-Score 0 - ALB,harmful,Score 0 + Rephrase data,37,13,50
-Score 0 - ALB,harmless,Score 0 + Rephrase data,10,40,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Score 0 + Rephrase data,41,9,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Score 0 + Rephrase data,14,36,50
-Llama-3.3-ALB,harmful,Score 0 + Rephrase data,49,1,50
-Llama-3.3-ALB,harmless,Score 0 + Rephrase data,27,23,50
-GLM-4-ALB,harmful,Score 0 + Rephrase data,47,3,50
-GLM-4-ALB,harmless,Score 0 + Rephrase data,11,39,50
-GLM-4,harmful,Score 0 + Rephrase data,50,0,50
-GLM-4,harmless,Score 0 + Rephrase data,16,34,50
+SmolLM2,harmful,Score 0 + Rephrase,46,4,50
+SmolLM2,harmless,Score 0 + Rephrase,12,38,50
+Qwen3,harmful,Score 0 + Rephrase,48,2,50
+Qwen3,harmless,Score 0 + Rephrase,23,27,50
+Raw Data,harmful,Score 0 + Rephrase,37,13,50
+Raw Data,harmless,Score 0 + Rephrase,8,42,50
+Score 0 + Rephrase + Refusals,harmful,Score 0 + Rephrase,28,22,50
+Score 0 + Rephrase + Refusals,harmless,Score 0 + Rephrase,8,42,50
+Score 0 + Rephrase,harmful,Score 0 + Rephrase,40,10,50
+Score 0 + Rephrase,harmless,Score 0 + Rephrase,9,41,50
+Score 0 + Rephrase + Metatags,harmful,Score 0 + Rephrase,30,20,50
+Score 0 + Rephrase + Metatags,harmless,Score 0 + Rephrase,10,40,50
+Score 0,harmful,Score 0 + Rephrase,40,10,50
+Score 0,harmless,Score 0 + Rephrase,10,40,50
+Safety Oracle,harmful,Score 0 + Rephrase,33,17,50
+Safety Oracle,harmless,Score 0 + Rephrase,11,39,50
+Llama-3.3,harmful,Score 0 + Rephrase,49,1,50
+Llama-3.3,harmless,Score 0 + Rephrase,30,20,50
+SmolLM2-ALB,harmful,Score 0 + Rephrase,44,6,50
+SmolLM2-ALB,harmless,Score 0 + Rephrase,15,35,50
+Qwen3-ALB,harmful,Score 0 + Rephrase,49,1,50
+Qwen3-ALB,harmless,Score 0 + Rephrase,19,31,50
+Raw Data-ALB,harmful,Score 0 + Rephrase,27,23,50
+Raw Data-ALB,harmless,Score 0 + Rephrase,6,44,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Score 0 + Rephrase,45,5,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Score 0 + Rephrase,11,39,50
+Score 0 + Rephrase -ALB,harmful,Score 0 + Rephrase,44,6,50
+Score 0 + Rephrase -ALB,harmless,Score 0 + Rephrase,10,40,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Score 0 + Rephrase,34,16,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Score 0 + Rephrase,11,39,50
+Score 0 - ALB,harmful,Score 0 + Rephrase,37,13,50
+Score 0 - ALB,harmless,Score 0 + Rephrase,10,40,50
+Safety Oracle - ALB,harmful,Score 0 + Rephrase,41,9,50
+Safety Oracle - ALB,harmless,Score 0 + Rephrase,14,36,50
+Llama-3.3-ALB,harmful,Score 0 + Rephrase,49,1,50
+Llama-3.3-ALB,harmless,Score 0 + Rephrase,27,23,50
+GLM-4-ALB,harmful,Score 0 + Rephrase,47,3,50
+GLM-4-ALB,harmless,Score 0 + Rephrase,11,39,50
+GLM-4,harmful,Score 0 + Rephrase,50,0,50
+GLM-4,harmless,Score 0 + Rephrase,16,34,50
 SmolLM2,harmful,Raw Data,47,3,50
 SmolLM2,harmless,Raw Data,24,26,50
 Qwen3,harmful,Raw Data,44,6,50
 Qwen3,harmless,Raw Data,16,34,50
 Raw Data,harmful,Raw Data,31,19,50
 Raw Data,harmless,Raw Data,25,25,50
-Score 0 + Rephrase data + Refusals,harmful,Raw Data,29,21,50
-Score 0 + Rephrase data + Refusals,harmless,Raw Data,20,30,50
-Score 0 + Rephrase data,harmful,Raw Data,37,13,50
-Score 0 + Rephrase data,harmless,Raw Data,19,31,50
-Score 0 + Rephrase data + Metatags,harmful,Raw Data,32,18,50
-Score 0 + Rephrase data + Metatags,harmless,Raw Data,19,31,50
+Score 0 + Rephrase + Refusals,harmful,Raw Data,29,21,50
+Score 0 + Rephrase + Refusals,harmless,Raw Data,20,30,50
+Score 0 + Rephrase,harmful,Raw Data,37,13,50
+Score 0 + Rephrase,harmless,Raw Data,19,31,50
+Score 0 + Rephrase + Metatags,harmful,Raw Data,32,18,50
+Score 0 + Rephrase + Metatags,harmless,Raw Data,19,31,50
 Score 0,harmful,Raw Data,39,11,50
 Score 0,harmless,Raw Data,20,30,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Raw Data,36,14,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Raw Data,18,32,50
+Safety Oracle,harmful,Raw Data,36,14,50
+Safety Oracle,harmless,Raw Data,18,32,50
 Llama-3.3,harmful,Raw Data,22,28,50
 Llama-3.3,harmless,Raw Data,32,18,50
 SmolLM2-ALB,harmful,Raw Data,45,5,50
@@ -263,118 +263,118 @@ Qwen3-ALB,harmful,Raw Data,43,7,50
 Qwen3-ALB,harmless,Raw Data,14,36,50
 Raw Data-ALB,harmful,Raw Data,28,22,50
 Raw Data-ALB,harmless,Raw Data,22,28,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Raw Data,38,12,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Raw Data,21,29,50
-Score 0 + Rephrase data -ALB,harmful,Raw Data,43,7,50
-Score 0 + Rephrase data -ALB,harmless,Raw Data,11,39,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Raw Data,34,16,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Raw Data,18,32,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Raw Data,38,12,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Raw Data,21,29,50
+Score 0 + Rephrase -ALB,harmful,Raw Data,43,7,50
+Score 0 + Rephrase -ALB,harmless,Raw Data,11,39,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Raw Data,34,16,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Raw Data,18,32,50
 Score 0 - ALB,harmful,Raw Data,38,12,50
 Score 0 - ALB,harmless,Raw Data,18,32,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Raw Data,34,16,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Raw Data,14,36,50
+Safety Oracle - ALB,harmful,Raw Data,34,16,50
+Safety Oracle - ALB,harmless,Raw Data,14,36,50
 Llama-3.3-ALB,harmful,Raw Data,32,18,50
 Llama-3.3-ALB,harmless,Raw Data,36,14,50
 GLM-4-ALB,harmful,Raw Data,46,4,50
 GLM-4-ALB,harmless,Raw Data,19,31,50
 GLM-4,harmful,Raw Data,47,3,50
 GLM-4,harmless,Raw Data,17,33,50
-SmolLM2,harmful,Score 0 + Rephrase data + Refusals,42,8,50
-SmolLM2,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Qwen3,harmful,Score 0 + Rephrase data + Refusals,46,4,50
-Qwen3,harmless,Score 0 + Rephrase data + Refusals,15,35,50
-Raw Data,harmful,Score 0 + Rephrase data + Refusals,20,30,50
-Raw Data,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Score 0 + Rephrase data + Refusals,harmful,Score 0 + Rephrase data + Refusals,11,39,50
-Score 0 + Rephrase data + Refusals,harmless,Score 0 + Rephrase data + Refusals,4,46,50
-Score 0 + Rephrase data,harmful,Score 0 + Rephrase data + Refusals,27,23,50
-Score 0 + Rephrase data,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Score 0 + Rephrase data + Metatags,harmful,Score 0 + Rephrase data + Refusals,17,33,50
-Score 0 + Rephrase data + Metatags,harmless,Score 0 + Rephrase data + Refusals,4,46,50
-Score 0,harmful,Score 0 + Rephrase data + Refusals,24,26,50
-Score 0,harmless,Score 0 + Rephrase data + Refusals,7,43,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Score 0 + Rephrase data + Refusals,29,21,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Score 0 + Rephrase data + Refusals,4,46,50
-Llama-3.3,harmful,Score 0 + Rephrase data + Refusals,48,2,50
-Llama-3.3,harmless,Score 0 + Rephrase data + Refusals,11,39,50
-SmolLM2-ALB,harmful,Score 0 + Rephrase data + Refusals,38,12,50
-SmolLM2-ALB,harmless,Score 0 + Rephrase data + Refusals,3,47,50
-Qwen3-ALB,harmful,Score 0 + Rephrase data + Refusals,45,5,50
-Qwen3-ALB,harmless,Score 0 + Rephrase data + Refusals,16,34,50
-Raw Data-ALB,harmful,Score 0 + Rephrase data + Refusals,15,35,50
-Raw Data-ALB,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Score 0 + Rephrase data + Refusals,27,23,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Score 0 + Rephrase data -ALB,harmful,Score 0 + Rephrase data + Refusals,39,11,50
-Score 0 + Rephrase data -ALB,harmless,Score 0 + Rephrase data + Refusals,11,39,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Score 0 + Rephrase data + Refusals,23,27,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Score 0 - ALB,harmful,Score 0 + Rephrase data + Refusals,33,17,50
-Score 0 - ALB,harmless,Score 0 + Rephrase data + Refusals,6,44,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Score 0 + Rephrase data + Refusals,31,19,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Score 0 + Rephrase data + Refusals,12,38,50
-Llama-3.3-ALB,harmful,Score 0 + Rephrase data + Refusals,44,6,50
-Llama-3.3-ALB,harmless,Score 0 + Rephrase data + Refusals,9,41,50
-GLM-4-ALB,harmful,Score 0 + Rephrase data + Refusals,42,8,50
-GLM-4-ALB,harmless,Score 0 + Rephrase data + Refusals,5,45,50
-GLM-4,harmful,Score 0 + Rephrase data + Refusals,46,4,50
-GLM-4,harmless,Score 0 + Rephrase data + Refusals,4,46,50
-SmolLM2,harmful,Score 0 + Rephrase data + Metatags,43,7,50
-SmolLM2,harmless,Score 0 + Rephrase data + Metatags,15,35,50
-Qwen3,harmful,Score 0 + Rephrase data + Metatags,49,1,50
-Qwen3,harmless,Score 0 + Rephrase data + Metatags,23,27,50
-Raw Data,harmful,Score 0 + Rephrase data + Metatags,25,25,50
-Raw Data,harmless,Score 0 + Rephrase data + Metatags,15,35,50
-Score 0 + Rephrase data + Refusals,harmful,Score 0 + Rephrase data + Metatags,18,32,50
-Score 0 + Rephrase data + Refusals,harmless,Score 0 + Rephrase data + Metatags,14,36,50
-Score 0 + Rephrase data,harmful,Score 0 + Rephrase data + Metatags,30,20,50
-Score 0 + Rephrase data,harmless,Score 0 + Rephrase data + Metatags,11,39,50
-Score 0 + Rephrase data + Metatags,harmful,Score 0 + Rephrase data + Metatags,22,28,50
-Score 0 + Rephrase data + Metatags,harmless,Score 0 + Rephrase data + Metatags,13,37,50
-Score 0,harmful,Score 0 + Rephrase data + Metatags,30,20,50
-Score 0,harmless,Score 0 + Rephrase data + Metatags,10,40,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Score 0 + Rephrase data + Metatags,4,46,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Score 0 + Rephrase data + Metatags,2,48,50
-Llama-3.3,harmful,Score 0 + Rephrase data + Metatags,45,5,50
-Llama-3.3,harmless,Score 0 + Rephrase data + Metatags,12,38,50
-SmolLM2-ALB,harmful,Score 0 + Rephrase data + Metatags,45,5,50
-SmolLM2-ALB,harmless,Score 0 + Rephrase data + Metatags,17,33,50
-Qwen3-ALB,harmful,Score 0 + Rephrase data + Metatags,47,3,50
-Qwen3-ALB,harmless,Score 0 + Rephrase data + Metatags,25,25,50
-Raw Data-ALB,harmful,Score 0 + Rephrase data + Metatags,14,36,50
-Raw Data-ALB,harmless,Score 0 + Rephrase data + Metatags,12,38,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Score 0 + Rephrase data + Metatags,29,21,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Score 0 + Rephrase data + Metatags,10,40,50
-Score 0 + Rephrase data -ALB,harmful,Score 0 + Rephrase data + Metatags,43,7,50
-Score 0 + Rephrase data -ALB,harmless,Score 0 + Rephrase data + Metatags,8,42,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Score 0 + Rephrase data + Metatags,27,23,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Score 0 + Rephrase data + Metatags,15,35,50
-Score 0 - ALB,harmful,Score 0 + Rephrase data + Metatags,29,21,50
-Score 0 - ALB,harmless,Score 0 + Rephrase data + Metatags,12,38,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Score 0 + Rephrase data + Metatags,5,45,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Score 0 + Rephrase data + Metatags,4,46,50
-Llama-3.3-ALB,harmful,Score 0 + Rephrase data + Metatags,45,5,50
-Llama-3.3-ALB,harmless,Score 0 + Rephrase data + Metatags,12,38,50
-GLM-4-ALB,harmful,Score 0 + Rephrase data + Metatags,43,7,50
-GLM-4-ALB,harmless,Score 0 + Rephrase data + Metatags,11,39,50
-GLM-4,harmful,Score 0 + Rephrase data + Metatags,46,4,50
-GLM-4,harmless,Score 0 + Rephrase data + Metatags,11,39,50
+SmolLM2,harmful,Score 0 + Rephrase + Refusals,42,8,50
+SmolLM2,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Qwen3,harmful,Score 0 + Rephrase + Refusals,46,4,50
+Qwen3,harmless,Score 0 + Rephrase + Refusals,15,35,50
+Raw Data,harmful,Score 0 + Rephrase + Refusals,20,30,50
+Raw Data,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Score 0 + Rephrase + Refusals,harmful,Score 0 + Rephrase + Refusals,11,39,50
+Score 0 + Rephrase + Refusals,harmless,Score 0 + Rephrase + Refusals,4,46,50
+Score 0 + Rephrase,harmful,Score 0 + Rephrase + Refusals,27,23,50
+Score 0 + Rephrase,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Score 0 + Rephrase + Metatags,harmful,Score 0 + Rephrase + Refusals,17,33,50
+Score 0 + Rephrase + Metatags,harmless,Score 0 + Rephrase + Refusals,4,46,50
+Score 0,harmful,Score 0 + Rephrase + Refusals,24,26,50
+Score 0,harmless,Score 0 + Rephrase + Refusals,7,43,50
+Safety Oracle,harmful,Score 0 + Rephrase + Refusals,29,21,50
+Safety Oracle,harmless,Score 0 + Rephrase + Refusals,4,46,50
+Llama-3.3,harmful,Score 0 + Rephrase + Refusals,48,2,50
+Llama-3.3,harmless,Score 0 + Rephrase + Refusals,11,39,50
+SmolLM2-ALB,harmful,Score 0 + Rephrase + Refusals,38,12,50
+SmolLM2-ALB,harmless,Score 0 + Rephrase + Refusals,3,47,50
+Qwen3-ALB,harmful,Score 0 + Rephrase + Refusals,45,5,50
+Qwen3-ALB,harmless,Score 0 + Rephrase + Refusals,16,34,50
+Raw Data-ALB,harmful,Score 0 + Rephrase + Refusals,15,35,50
+Raw Data-ALB,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Score 0 + Rephrase + Refusals,27,23,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Score 0 + Rephrase -ALB,harmful,Score 0 + Rephrase + Refusals,39,11,50
+Score 0 + Rephrase -ALB,harmless,Score 0 + Rephrase + Refusals,11,39,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Score 0 + Rephrase + Refusals,23,27,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Score 0 - ALB,harmful,Score 0 + Rephrase + Refusals,33,17,50
+Score 0 - ALB,harmless,Score 0 + Rephrase + Refusals,6,44,50
+Safety Oracle - ALB,harmful,Score 0 + Rephrase + Refusals,31,19,50
+Safety Oracle - ALB,harmless,Score 0 + Rephrase + Refusals,12,38,50
+Llama-3.3-ALB,harmful,Score 0 + Rephrase + Refusals,44,6,50
+Llama-3.3-ALB,harmless,Score 0 + Rephrase + Refusals,9,41,50
+GLM-4-ALB,harmful,Score 0 + Rephrase + Refusals,42,8,50
+GLM-4-ALB,harmless,Score 0 + Rephrase + Refusals,5,45,50
+GLM-4,harmful,Score 0 + Rephrase + Refusals,46,4,50
+GLM-4,harmless,Score 0 + Rephrase + Refusals,4,46,50
+SmolLM2,harmful,Score 0 + Rephrase + Metatags,43,7,50
+SmolLM2,harmless,Score 0 + Rephrase + Metatags,15,35,50
+Qwen3,harmful,Score 0 + Rephrase + Metatags,49,1,50
+Qwen3,harmless,Score 0 + Rephrase + Metatags,23,27,50
+Raw Data,harmful,Score 0 + Rephrase + Metatags,25,25,50
+Raw Data,harmless,Score 0 + Rephrase + Metatags,15,35,50
+Score 0 + Rephrase + Refusals,harmful,Score 0 + Rephrase + Metatags,18,32,50
+Score 0 + Rephrase + Refusals,harmless,Score 0 + Rephrase + Metatags,14,36,50
+Score 0 + Rephrase,harmful,Score 0 + Rephrase + Metatags,30,20,50
+Score 0 + Rephrase,harmless,Score 0 + Rephrase + Metatags,11,39,50
+Score 0 + Rephrase + Metatags,harmful,Score 0 + Rephrase + Metatags,22,28,50
+Score 0 + Rephrase + Metatags,harmless,Score 0 + Rephrase + Metatags,13,37,50
+Score 0,harmful,Score 0 + Rephrase + Metatags,30,20,50
+Score 0,harmless,Score 0 + Rephrase + Metatags,10,40,50
+Safety Oracle,harmful,Score 0 + Rephrase + Metatags,4,46,50
+Safety Oracle,harmless,Score 0 + Rephrase + Metatags,2,48,50
+Llama-3.3,harmful,Score 0 + Rephrase + Metatags,45,5,50
+Llama-3.3,harmless,Score 0 + Rephrase + Metatags,12,38,50
+SmolLM2-ALB,harmful,Score 0 + Rephrase + Metatags,45,5,50
+SmolLM2-ALB,harmless,Score 0 + Rephrase + Metatags,17,33,50
+Qwen3-ALB,harmful,Score 0 + Rephrase + Metatags,47,3,50
+Qwen3-ALB,harmless,Score 0 + Rephrase + Metatags,25,25,50
+Raw Data-ALB,harmful,Score 0 + Rephrase + Metatags,14,36,50
+Raw Data-ALB,harmless,Score 0 + Rephrase + Metatags,12,38,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Score 0 + Rephrase + Metatags,29,21,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Score 0 + Rephrase + Metatags,10,40,50
+Score 0 + Rephrase -ALB,harmful,Score 0 + Rephrase + Metatags,43,7,50
+Score 0 + Rephrase -ALB,harmless,Score 0 + Rephrase + Metatags,8,42,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Score 0 + Rephrase + Metatags,27,23,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Score 0 + Rephrase + Metatags,15,35,50
+Score 0 - ALB,harmful,Score 0 + Rephrase + Metatags,29,21,50
+Score 0 - ALB,harmless,Score 0 + Rephrase + Metatags,12,38,50
+Safety Oracle - ALB,harmful,Score 0 + Rephrase + Metatags,5,45,50
+Safety Oracle - ALB,harmless,Score 0 + Rephrase + Metatags,4,46,50
+Llama-3.3-ALB,harmful,Score 0 + Rephrase + Metatags,45,5,50
+Llama-3.3-ALB,harmless,Score 0 + Rephrase + Metatags,12,38,50
+GLM-4-ALB,harmful,Score 0 + Rephrase + Metatags,43,7,50
+GLM-4-ALB,harmless,Score 0 + Rephrase + Metatags,11,39,50
+GLM-4,harmful,Score 0 + Rephrase + Metatags,46,4,50
+GLM-4,harmless,Score 0 + Rephrase + Metatags,11,39,50
 SmolLM2,harmful,Score 0,39,11,50
 SmolLM2,harmless,Score 0,17,33,50
 Qwen3,harmful,Score 0,46,4,50
 Qwen3,harmless,Score 0,10,40,50
 Raw Data,harmful,Score 0,37,13,50
 Raw Data,harmless,Score 0,12,38,50
-Score 0 + Rephrase data + Refusals,harmful,Score 0,37,13,50
-Score 0 + Rephrase data + Refusals,harmless,Score 0,15,35,50
-Score 0 + Rephrase data,harmful,Score 0,42,8,50
-Score 0 + Rephrase data,harmless,Score 0,11,39,50
-Score 0 + Rephrase data + Metatags,harmful,Score 0,38,12,50
-Score 0 + Rephrase data + Metatags,harmless,Score 0,12,38,50
+Score 0 + Rephrase + Refusals,harmful,Score 0,37,13,50
+Score 0 + Rephrase + Refusals,harmless,Score 0,15,35,50
+Score 0 + Rephrase,harmful,Score 0,42,8,50
+Score 0 + Rephrase,harmless,Score 0,11,39,50
+Score 0 + Rephrase + Metatags,harmful,Score 0,38,12,50
+Score 0 + Rephrase + Metatags,harmless,Score 0,12,38,50
 Score 0,harmful,Score 0,42,8,50
 Score 0,harmless,Score 0,13,37,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Score 0,38,12,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Score 0,11,39,50
+Safety Oracle,harmful,Score 0,38,12,50
+Safety Oracle,harmless,Score 0,11,39,50
 Llama-3.3,harmful,Score 0,47,3,50
 Llama-3.3,harmless,Score 0,20,30,50
 SmolLM2-ALB,harmful,Score 0,39,11,50
@@ -383,78 +383,78 @@ Qwen3-ALB,harmful,Score 0,46,4,50
 Qwen3-ALB,harmless,Score 0,11,39,50
 Raw Data-ALB,harmful,Score 0,36,14,50
 Raw Data-ALB,harmless,Score 0,12,38,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Score 0,41,9,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Score 0,16,34,50
-Score 0 + Rephrase data -ALB,harmful,Score 0,42,8,50
-Score 0 + Rephrase data -ALB,harmless,Score 0,7,43,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Score 0,40,10,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Score 0,13,37,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Score 0,41,9,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Score 0,16,34,50
+Score 0 + Rephrase -ALB,harmful,Score 0,42,8,50
+Score 0 + Rephrase -ALB,harmless,Score 0,7,43,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Score 0,40,10,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Score 0,13,37,50
 Score 0 - ALB,harmful,Score 0,38,12,50
 Score 0 - ALB,harmless,Score 0,10,40,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Score 0,40,10,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Score 0,6,44,50
+Safety Oracle - ALB,harmful,Score 0,40,10,50
+Safety Oracle - ALB,harmless,Score 0,6,44,50
 Llama-3.3-ALB,harmful,Score 0,45,5,50
 Llama-3.3-ALB,harmless,Score 0,19,31,50
 GLM-4-ALB,harmful,Score 0,45,5,50
 GLM-4-ALB,harmless,Score 0,11,39,50
 GLM-4,harmful,Score 0,45,5,50
 GLM-4,harmless,Score 0,10,40,50
-SmolLM2,harmful,Score 0 + Rephrase data + Refusals + Metatags,47,3,50
-SmolLM2,harmless,Score 0 + Rephrase data + Refusals + Metatags,9,41,50
-Qwen3,harmful,Score 0 + Rephrase data + Refusals + Metatags,47,3,50
-Qwen3,harmless,Score 0 + Rephrase data + Refusals + Metatags,12,38,50
-Raw Data,harmful,Score 0 + Rephrase data + Refusals + Metatags,34,16,50
-Raw Data,harmless,Score 0 + Rephrase data + Refusals + Metatags,6,44,50
-Score 0 + Rephrase data + Refusals,harmful,Score 0 + Rephrase data + Refusals + Metatags,29,21,50
-Score 0 + Rephrase data + Refusals,harmless,Score 0 + Rephrase data + Refusals + Metatags,4,46,50
-Score 0 + Rephrase data,harmful,Score 0 + Rephrase data + Refusals + Metatags,43,7,50
-Score 0 + Rephrase data,harmless,Score 0 + Rephrase data + Refusals + Metatags,4,46,50
-Score 0 + Rephrase data + Metatags,harmful,Score 0 + Rephrase data + Refusals + Metatags,33,17,50
-Score 0 + Rephrase data + Metatags,harmless,Score 0 + Rephrase data + Refusals + Metatags,5,45,50
-Score 0,harmful,Score 0 + Rephrase data + Refusals + Metatags,39,11,50
-Score 0,harmless,Score 0 + Rephrase data + Refusals + Metatags,5,45,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,Score 0 + Rephrase data + Refusals + Metatags,33,17,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,Score 0 + Rephrase data + Refusals + Metatags,8,42,50
-Llama-3.3,harmful,Score 0 + Rephrase data + Refusals + Metatags,46,4,50
-Llama-3.3,harmless,Score 0 + Rephrase data + Refusals + Metatags,9,41,50
-SmolLM2-ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,46,4,50
-SmolLM2-ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,11,39,50
-Qwen3-ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,46,4,50
-Qwen3-ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,13,37,50
-Raw Data-ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,28,22,50
-Raw Data-ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,5,45,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,43,7,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,4,46,50
-Score 0 + Rephrase data -ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,43,7,50
-Score 0 + Rephrase data -ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,2,48,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,38,12,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,4,46,50
-Score 0 - ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,43,7,50
-Score 0 - ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,4,46,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,41,9,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,4,46,50
-Llama-3.3-ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,44,6,50
-Llama-3.3-ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,9,41,50
-GLM-4-ALB,harmful,Score 0 + Rephrase data + Refusals + Metatags,45,5,50
-GLM-4-ALB,harmless,Score 0 + Rephrase data + Refusals + Metatags,8,42,50
-GLM-4,harmful,Score 0 + Rephrase data + Refusals + Metatags,49,1,50
-GLM-4,harmless,Score 0 + Rephrase data + Refusals + Metatags,5,45,50
+SmolLM2,harmful,Safety Oracle,47,3,50
+SmolLM2,harmless,Safety Oracle,9,41,50
+Qwen3,harmful,Safety Oracle,47,3,50
+Qwen3,harmless,Safety Oracle,12,38,50
+Raw Data,harmful,Safety Oracle,34,16,50
+Raw Data,harmless,Safety Oracle,6,44,50
+Score 0 + Rephrase + Refusals,harmful,Safety Oracle,29,21,50
+Score 0 + Rephrase + Refusals,harmless,Safety Oracle,4,46,50
+Score 0 + Rephrase,harmful,Safety Oracle,43,7,50
+Score 0 + Rephrase,harmless,Safety Oracle,4,46,50
+Score 0 + Rephrase + Metatags,harmful,Safety Oracle,33,17,50
+Score 0 + Rephrase + Metatags,harmless,Safety Oracle,5,45,50
+Score 0,harmful,Safety Oracle,39,11,50
+Score 0,harmless,Safety Oracle,5,45,50
+Safety Oracle,harmful,Safety Oracle,33,17,50
+Safety Oracle,harmless,Safety Oracle,8,42,50
+Llama-3.3,harmful,Safety Oracle,46,4,50
+Llama-3.3,harmless,Safety Oracle,9,41,50
+SmolLM2-ALB,harmful,Safety Oracle,46,4,50
+SmolLM2-ALB,harmless,Safety Oracle,11,39,50
+Qwen3-ALB,harmful,Safety Oracle,46,4,50
+Qwen3-ALB,harmless,Safety Oracle,13,37,50
+Raw Data-ALB,harmful,Safety Oracle,28,22,50
+Raw Data-ALB,harmless,Safety Oracle,5,45,50
+Score 0 + Rephrase + Refusals - ALB,harmful,Safety Oracle,43,7,50
+Score 0 + Rephrase + Refusals - ALB,harmless,Safety Oracle,4,46,50
+Score 0 + Rephrase -ALB,harmful,Safety Oracle,43,7,50
+Score 0 + Rephrase -ALB,harmless,Safety Oracle,2,48,50
+Score 0 + Rephrase + Metatags -ALB,harmful,Safety Oracle,38,12,50
+Score 0 + Rephrase + Metatags -ALB,harmless,Safety Oracle,4,46,50
+Score 0 - ALB,harmful,Safety Oracle,43,7,50
+Score 0 - ALB,harmless,Safety Oracle,4,46,50
+Safety Oracle - ALB,harmful,Safety Oracle,41,9,50
+Safety Oracle - ALB,harmless,Safety Oracle,4,46,50
+Llama-3.3-ALB,harmful,Safety Oracle,44,6,50
+Llama-3.3-ALB,harmless,Safety Oracle,9,41,50
+GLM-4-ALB,harmful,Safety Oracle,45,5,50
+GLM-4-ALB,harmless,Safety Oracle,8,42,50
+GLM-4,harmful,Safety Oracle,49,1,50
+GLM-4,harmless,Safety Oracle,5,45,50
 SmolLM2,harmful,GLM-4,0,50,50
 SmolLM2,harmless,GLM-4,0,50,50
 Qwen3,harmful,GLM-4,0,50,50
 Qwen3,harmless,GLM-4,0,50,50
 Raw Data,harmful,GLM-4,0,50,50
 Raw Data,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data + Metatags,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data + Metatags,harmless,GLM-4,0,50,50
+Score 0 + Rephrase + Refusals,harmful,GLM-4,0,50,50
+Score 0 + Rephrase + Refusals,harmless,GLM-4,0,50,50
+Score 0 + Rephrase,harmful,GLM-4,0,50,50
+Score 0 + Rephrase,harmless,GLM-4,0,50,50
+Score 0 + Rephrase + Metatags,harmful,GLM-4,0,50,50
+Score 0 + Rephrase + Metatags,harmless,GLM-4,0,50,50
 Score 0,harmful,GLM-4,0,50,50
 Score 0,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags,harmless,GLM-4,0,50,50
+Safety Oracle,harmful,GLM-4,0,50,50
+Safety Oracle,harmless,GLM-4,0,50,50
 Llama-3.3,harmful,GLM-4,0,50,50
 Llama-3.3,harmless,GLM-4,0,50,50
 SmolLM2-ALB,harmful,GLM-4,0,50,50
@@ -463,16 +463,16 @@ Qwen3-ALB,harmful,GLM-4,0,50,50
 Qwen3-ALB,harmless,GLM-4,0,50,50
 Raw Data-ALB,harmful,GLM-4,0,50,50
 Raw Data-ALB,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals - ALB,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals - ALB,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data -ALB,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data -ALB,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data + Metatags-ALB,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data + Metatags-ALB,harmless,GLM-4,0,50,50
+Score 0 + Rephrase + Refusals - ALB,harmful,GLM-4,0,50,50
+Score 0 + Rephrase + Refusals - ALB,harmless,GLM-4,0,50,50
+Score 0 + Rephrase -ALB,harmful,GLM-4,0,50,50
+Score 0 + Rephrase -ALB,harmless,GLM-4,0,50,50
+Score 0 + Rephrase + Metatags -ALB,harmful,GLM-4,0,50,50
+Score 0 + Rephrase + Metatags -ALB,harmless,GLM-4,0,50,50
 Score 0 - ALB,harmful,GLM-4,0,50,50
 Score 0 - ALB,harmless,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmful,GLM-4,0,50,50
-Score 0 + Rephrase data + Refusals + Metatags - ALB,harmless,GLM-4,0,50,50
+Safety Oracle - ALB,harmful,GLM-4,0,50,50
+Safety Oracle - ALB,harmless,GLM-4,0,50,50
 Llama-3.3-ALB,harmful,GLM-4,0,50,50
 Llama-3.3-ALB,harmless,GLM-4,0,50,50
 GLM-4-ALB,harmful,GLM-4,0,50,50
